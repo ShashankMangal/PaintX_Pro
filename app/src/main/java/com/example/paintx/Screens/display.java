@@ -1,7 +1,7 @@
-package com.example.paintxpro.Screens;
+package com.example.paintx.Screens;
 
-import static com.example.paintxpro.Screens.PaintScreen.paint_brush;
-import static com.example.paintxpro.Screens.PaintScreen.path;
+import static com.example.paintx.Screens.PaintScreen.paint_brush;
+import static com.example.paintx.Screens.PaintScreen.path;
 
 import android.content.Context;
 import android.graphics.Canvas;

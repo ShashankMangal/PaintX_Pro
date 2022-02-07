@@ -1,35 +1,27 @@
-package com.example.paintxpro.Screens;
+package com.example.paintx.Screens;
 
-import static com.example.paintxpro.Screens.display.colorList;
-import static com.example.paintxpro.Screens.display.current_brush;
-import static com.example.paintxpro.Screens.display.pathList;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import static com.example.paintx.Screens.display.colorList;
+import static com.example.paintx.Screens.display.current_brush;
+import static com.example.paintx.Screens.display.pathList;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.paintxpro.R;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import com.example.paintx.R;
+
 
 public class PaintScreen extends AppCompatActivity {
 

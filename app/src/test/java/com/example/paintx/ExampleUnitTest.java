@@ -1,4 +1,4 @@
-package com.example.paintxpro;
+package com.example.paintx;
 
 import org.junit.Test;
 
