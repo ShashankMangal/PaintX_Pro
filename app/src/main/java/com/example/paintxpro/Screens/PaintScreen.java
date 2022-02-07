@@ -6,13 +6,17 @@ import static com.example.paintxpro.Screens.display.pathList;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -21,10 +25,18 @@ import android.widget.Toast;
 
 import com.example.paintxpro.R;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
 public class PaintScreen extends AppCompatActivity {
 
     public static Path path = new Path();
     public static Paint paint_brush = new Paint();
+
+    private ConstraintLayout content;
 
 
 
@@ -32,6 +44,11 @@ public class PaintScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paint_screen);
+
+        content = findViewById(R.id.display_content);
+
+        content.setDrawingCacheEnabled(true);
+
     }
 
     public void pencil(View view) {
@@ -126,9 +143,12 @@ public class PaintScreen extends AppCompatActivity {
                 Toast.makeText(this, "Terms", Toast.LENGTH_SHORT).show();
                 return true;
 
+
             default:
                 return super.onOptionsItemSelected(item);
         }
 
     }
+
+
 }
