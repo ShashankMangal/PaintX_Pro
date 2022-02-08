@@ -1,11 +1,11 @@
-package com.example.paintx.Screens;
+package com.sharkBytesLab.paintx.Screens;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.paintx.R;
+import com.sharkBytesLab.paintx.R;
 
 public class SplashScreen extends AppCompatActivity {
 

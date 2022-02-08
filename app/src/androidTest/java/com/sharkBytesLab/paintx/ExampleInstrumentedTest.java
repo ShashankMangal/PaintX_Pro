@@ -1,4 +1,4 @@
-package com.example.paintx;
+package com.sharkBytesLab.paintx;
 
 import android.content.Context;
 

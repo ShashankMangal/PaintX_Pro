@@ -1,4 +1,4 @@
-package com.example.paintx;
+package com.sharkBytesLab.paintx;
 
 import org.junit.Test;
 

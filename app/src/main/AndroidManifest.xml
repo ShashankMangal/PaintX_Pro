@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.paintx">
+    package="com.sharkBytesLab.paintx">
 
     <application
         android:allowBackup="true"
@@ -10,18 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PaintXPro">
         <activity
-            android:name="com.example.paintx.Screens.SplashScreen"
-            android:exported="true" >
+            android:name=".Screens.TermsScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.PolicyScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Screens.SplashScreen"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
-            android:name="com.example.paintx.Screens.PaintScreen"
-            android:exported="false"/>
+            android:name=".Screens.PaintScreen"
+            android:exported="false" />
+
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="doNokpQpB4U8uCdC0RFRN7O2VWKagVVGIFFffq_NSgiVQ4_TOoqDFOmBgdKpxUgGSRpRiC39b85dC8_TkifX2y" />
     </application>
 
 </manifest>

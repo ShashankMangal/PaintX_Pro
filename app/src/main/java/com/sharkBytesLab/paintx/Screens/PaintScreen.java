@@ -1,8 +1,8 @@
-package com.example.paintx.Screens;
+package com.sharkBytesLab.paintx.Screens;
 
-import static com.example.paintx.Screens.display.colorList;
-import static com.example.paintx.Screens.display.current_brush;
-import static com.example.paintx.Screens.display.pathList;
+import static com.sharkBytesLab.paintx.Screens.display.colorList;
+import static com.sharkBytesLab.paintx.Screens.display.current_brush;
+import static com.sharkBytesLab.paintx.Screens.display.pathList;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -10,6 +10,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -19,8 +20,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import com.sharkBytesLab.paintx.R;
 
-import com.example.paintx.R;
+import java.util.concurrent.TimeUnit;
 
 
 public class PaintScreen extends AppCompatActivity {
@@ -29,6 +31,8 @@ public class PaintScreen extends AppCompatActivity {
     public static Paint paint_brush = new Paint();
 
     private ConstraintLayout content;
+
+
 
 
 
@@ -41,7 +45,20 @@ public class PaintScreen extends AppCompatActivity {
 
         content.setDrawingCacheEnabled(true);
 
+
+
+
+
+
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+
+    }
+
 
     public void pencil(View view) {
         paint_brush.setColor(Color.BLACK);
@@ -125,10 +142,14 @@ public class PaintScreen extends AppCompatActivity {
                 return true;
 
             case R.id.privacy:
+                startActivity(new Intent(PaintScreen.this, PolicyScreen.class));
+                finish();
                 Toast.makeText(this, "Privacy", Toast.LENGTH_SHORT).show();
                 return true;
 
             case R.id.terms:
+                startActivity(new Intent(PaintScreen.this, TermsScreen.class));
+                finish();
                 Toast.makeText(this, "Terms", Toast.LENGTH_SHORT).show();
                 return true;
 
@@ -138,6 +159,7 @@ public class PaintScreen extends AppCompatActivity {
         }
 
     }
+
 
 
 }
