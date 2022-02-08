@@ -69,10 +69,7 @@ public class PaintScreen extends AppCompatActivity {
         currentColor(paint_brush.getColor());
     }
 
-    public void blackColor(View view) {
-        paint_brush.setColor(Color.BLACK);
-        currentColor(paint_brush.getColor());
-    }
+
 
     public void eraser(View view) {
         pathList.clear();
