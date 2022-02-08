@@ -153,6 +153,19 @@ public class PaintScreen extends AppCompatActivity {
                 Toast.makeText(this, "Terms", Toast.LENGTH_SHORT).show();
                 return true;
 
+            case R.id.share:
+
+
+                String shareBody = "PaintX is a free to use app . You can use it in online classes, drawing, note making etc." +" \n" +
+                        "Download from Play Store\n" + "https://play.google.com/store/apps/details?id=" + getPackageName();
+
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_TEXT, shareBody);
+                startActivity(intent);
+
+                return true;
+
 
             default:
                 return super.onOptionsItemSelected(item);
